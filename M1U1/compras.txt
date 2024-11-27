@@ -2,9 +2,3 @@ galletitas
 huevos
 pan
 queso
-bananas
-naranjas
-paltas
-detergente
-esponja
-lavandina
