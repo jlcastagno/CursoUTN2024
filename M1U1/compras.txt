@@ -5,3 +5,6 @@ queso
 bananas
 naranjas
 paltas
+detergente
+esponja
+lavandina
