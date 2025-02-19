@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/', async (req,res,next))   {
+router.post('/', async (req,res,next) =>  {
 
 var cuit = req.body.cuit;
 var nombre = req.body.nombre;
@@ -29,12 +29,12 @@ console.log(req.body);
 var obj = {
   to: 'jlcastagno@github.com',
   subject: 'Contacto desde la web',
-  html: nombre + " se contacto a traves y quiere más info a este correo: " + email
-  <br> "Su tel es " + telefono
+  html: nombre + " se contacto a traves y quiere más info a este correo: " + email + 
+  "<br>" + "Su tel es " + telefono
   } //cierra var obj
 
-
-// Looking to send emails in production? Check out our Email API/SMTP product!
+{/* 
+// Looking to send emails in production? Check out our Email API/SMTP product! */}
 var transport = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: process.env.SMTP_PORT,
@@ -44,14 +44,12 @@ var transport = nodemailer.createTransport({
   }
 });
 
-var info = await transporter.sendMail(obj);
+  var info = await transport.sendMail(obj);
 
 res.render('index', {
   message: 'Mensaje enviado correctamente',
 });
 
-
-
-
+});
 
 module.exports = router;
