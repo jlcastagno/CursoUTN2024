@@ -50,6 +50,6 @@ res.render('index', {
   message: 'Mensaje enviado correctamente',
 });
 
-});
+
 
 module.exports = router;
