@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR DE CARACTERES EN AREA DE TEXTO</title>
+</head>
+<body>
+     <style>
+        #characterCount {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="myTextarea" rows="10" cols="50" oninput="updateCharacterCount()"></textarea>
+    <div id="characterCount">Caracteres: 0</div>
+
+    <script>
+        function updateCharacterCount() {
+            var textarea = document.getElementById("myTextarea");
+            var characterCount = textarea.value.length;
+            document.getElementById("characterCount").innerText = "Caracteres: " + characterCount;
+        }
+    </script>
+</body>
+</html>

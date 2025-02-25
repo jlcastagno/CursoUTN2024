@@ -1,0 +1,32 @@
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMBIAR COLOR DEL FONDO</title>
+</head>
+<body>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #square1 { background-color: red; }
+        #square2 { background-color: green; }
+        #square3 { background-color: blue; }
+    </style>
+    <div id="square1" class="square" onclick="changeBackgroundColor('red')"></div>
+    <div id="square2" class="square" onclick="changeBackgroundColor('green')"></div>
+    <div id="square3" class="square" onclick="changeBackgroundColor('blue')"></div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
