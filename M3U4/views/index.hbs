@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+{{#if ingresado}}
+    <p>Hola, {{nombre}}</p>
+    <p>Tenés {{edad}} años. ¡Felicitaciones!</p>
+    <a href="/salir">Salir</a>
+        
+{{/if}}
+
+    {{#unless ingresado}}
+        <p>¿Quién sos?</p>
+        <form action="/ingresar" method="post">
+            <input type="text" name="nombre"><br>
+            <p>¿Cuántos años tenés?</p>
+            <input type="text" name = "edad">
+            <button>Ingresar</button>
+        </form>
+    {{/unless}}
+    
+
