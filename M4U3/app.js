@@ -28,13 +28,19 @@ app.use('/users', usersRouter);
 
 /* ejemplos de query */
 /*/
-try {
-  // For pool initialization, see above
-  const [rows, fields] = await pool.query('SELECT * FROM empleados');
-  // Connection is automatically released when query resolves
-} catch (err) {
-  console.log(err);
+async function ejecutarConsulta() {
+  try {
+    var result = await pool.query('SELECT * FROM empleados');
+    console.log(result);
+  
+  } catch (err) {
+      console.error('Error en la consulta', err);
+  }
+
 }
+
+ejecutarConsulta();
+
 /*/
 pool.query('select * from empleados').then(function(resultados){
   console.log(resultados);
