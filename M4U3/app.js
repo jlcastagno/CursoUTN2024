@@ -27,15 +27,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 /* ejemplos de query */
-/*/
-try {
-  // For pool initialization, see above
-  const [rows, fields] = await pool.query('SELECT * FROM empleados');
-  // Connection is automatically released when query resolves
-} catch (err) {
-  console.log(err);
-}
-/*/
 pool.query('select * from empleados').then(function(resultados){
   console.log(resultados);
 
