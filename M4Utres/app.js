@@ -33,42 +33,7 @@ pool.query('select * from comision_evaluadora').then(function(resultados){
 });
 
 
-/*insert
-var obj = {
-  nombre: 'Martín',
-  apellido: 'Insaurralde',
-  trabajo: 'detective',
-  edad: '38',
-  salario: 500000,
-  mail: 'martin_insaurralde@bignet.com'
 
-};
-
-pool.query('insert into empleados set ?', [obj] ).then (function(resultados) {
-  console.log(resultados)
-});
-/*/
-
-//update
-/*/
-var id = 20;
-obj = {
-  nombre:'Julián',
-  apellido: 'Contreras'
-}
-
-pool.query('update empleados set ? where id_emp = ?', [obj,id] ).then (function(resultados) {
-  console.log(resultados)
-});
-/*/
-
-//delete
-/*/
-var id = 10;
-pool.query('delete from empleados where id_emp = ?', [id] ).then (function(resultados) {
-  console.log(resultados);
-});
-/*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
