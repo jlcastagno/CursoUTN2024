@@ -27,7 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 /* ejemplos de query */
-pool.query('select * from empleados').then(function(resultados){
+pool.query('select * from comision_evaluadora').then(function(resultados){
   console.log(resultados);
 
 });
